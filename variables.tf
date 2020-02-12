@@ -7,9 +7,13 @@ variable "key_name" {}
 
 variable "app_svr_instance_type" {}
 
-variable "asg_min" {}
+variable "asg_min" {
+  description = "minimum instances for scaling"
+}
 
-variable "asg_max" {}
+variable "asg_max" {
+  description = "max instances for scaling"
+}
 
 # Amazon Linux AMI
 # Most recent as of 2015-12-02
