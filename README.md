@@ -15,3 +15,15 @@
 --- | --- | ---
 asg_min | minimum instances for scaling | int
 asg_max | maximum instances for scaling | int
+public_subnet_id | Subnet to use for load balancers | string
+availability_zones | Availability zones in which the infrastructure is created | list of strings
+vpc_id | VPC id within which the infrastructure should be created | string
+private_subnet_cidr | CIDR for the Private Subnet | cidr
+public_subnet_cidr | CIDR for the Public Subnet| cidr
+vpc_cidr | CIDR for the whole VPC | string
+app_svr_instance_type | Instance type to be used in launch configuration Eg. t2.nano| string
+key_name | Name of public key that would be added to authorized keys of ASG| string
+ip_range | Public internet cidr| cidr
+region | Region where infrastructure is created| string
+redis_cache_node_count | umber of cache nodes for the cluster | int
+redisstore_subnet_id | Subnet id where the cache nodes would be launched| string

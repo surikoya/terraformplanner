@@ -1,11 +1,18 @@
-variable "region" {}
+variable "region" {
+  description = "Region where infrastructure is created"
+}
 
-variable "ip_range" {}
+variable "ip_range" {
+  description = "Public internet cidr"
+}
 
+variable "key_name" {
+  description = "Name of public key that would be added to authorized keys of ASG"
+}
 
-variable "key_name" {}
-
-variable "app_svr_instance_type" {}
+variable "app_svr_instance_type" {
+  description = "Instance type to be used in launch configuration Eg. t2.nano"
+}
 
 variable "asg_min" {
   description = "minimum instances for scaling"
@@ -53,5 +60,5 @@ variable redis_cache_node_count {
 }
 
 variable redisstore_subnet_id {
-  description = "CIDR for the redis subnetwork"
+  description = "Subnet id where the cache nodes would be launched"
 }
